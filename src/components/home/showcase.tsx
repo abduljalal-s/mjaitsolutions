@@ -63,13 +63,13 @@ const Showcase = () => {
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
 				{showcaseSection.map((item, key) => {
 					return (
-						<div key={key} className="flex flex-col items-center text-white p-4 rounded-lg shadow-lg"
+						<div key={key} className="flex flex-col object-contain items-center text-white p-2 rounded-lg shadow-lg"
 							style={{
 								background: `linear-gradient(${item.color}, #D9D9D9) `
 							}}>
-							<h3 className="font-semibold mt-4 text-[20px]">{item.name}</h3>
-							<Button className="bg-[#3771C8] text-[12px] my-2 px-4 py-2">Show more</Button>
-							<Image src={item.image} alt={item.name} className="mb-4 w-full h-auto object-contain"></Image>
+							<h3 className="font-semibold mt-2 text-[16px]">{item.name}</h3>
+							<Button className="bg-[#3771C8] text-[10px] my-1 px-2 py-1">Show more</Button>
+							<Image src={item.image} alt={item.name} className="mb-2 w-full h-auto object-contain"></Image>
 						</div>
 					)
 				})}

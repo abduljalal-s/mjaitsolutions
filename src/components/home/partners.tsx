@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import illustration from "../../../public/partnerImg.webp";
-import sponsor from "../../../public/sponsor1.webp";
 
 import {
   Card,
@@ -11,35 +10,31 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import sponsor1 from "../../../public/sponsor1.webp";
+import sponsor2 from "../../../public/sponsor2.png";
+import sponsor3 from "../../../public/sponsor3.png";
+import sponsor4 from "../../../public/sponsor4.png";
+import sponsor5 from "../../../public/sponsor5.png";
 import { Button } from "../ui/button";
+
+const sponsors = [sponsor1, sponsor2, sponsor3, sponsor4, sponsor5];
 
 const Partner = () => {
   return (
     <div>
-      <div className="flex flex-col items-center my-[3rem]">
-        <h3 className="text-[#0B0A0A] text-[30px] font-semibold">
-          Our Partners
-        </h3>
-        <p className="text-[#364151]">
-          Our Network of Trusted Partners Helps Us Deliver the Best
-        </p>
-      </div>
-
-      <div className="flex flex-row flex-wrap px-[3rem] gap-8 justify-center">
-        <div className="w-[30%]">
-          <Image src={sponsor} alt="sponsor" className="w-[100%]"></Image>
-        </div>
-        <div className="w-[30%]">
-          <Image src={sponsor} alt="sponsor" className="w-[100%]"></Image>
-        </div>
-        <div className="w-[30%]">
-          <Image src={sponsor} alt="sponsor" className="w-[100%]"></Image>
-        </div>
-        <div className="w-[30%]">
-          <Image src={sponsor} alt="sponsor" className="w-[100%]"></Image>
-        </div>
-        <div className="w-[30%]">
-          <Image src={sponsor} alt="sponsor" className="w-[100%]"></Image>
+      <div className="flex flex-col items-center my-12">
+        <h3 className="text-[#0067FF] text-[30px] font-semibold">Our Partners</h3>
+        <p className="text-[#364151] pl-2 pr-1 ">Our Network Of Partners Helps Us Deliver The Best</p>
+        <div className="grid grid-cols-2 sm:flex sm:justify-center gap-8 mt-6">
+          {sponsors.map((logo, index) => (
+            <div key={index} className="w-[150px] flex-shrink-0">
+              <Image
+                src={logo}
+                alt={`sponsor ${index + 1}`}
+                className="w-full h-auto object-contain rounded-lg"
+              />
+            </div>
+          ))}
         </div>
       </div>
 

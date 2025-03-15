@@ -41,20 +41,20 @@ const Testimonials = () => {
       <div className="flex flex-row flex-wrap justify-around">
         {testimonialsData.map((testimonial, key) => {
           return (
-            <Card className={`w-[45%] relative my-9  mb-1.5${key % 2 === 0 ? "translate-y-[-4.5rem]" : ""}`} key={key}>
+            <Card className={`w-[40%] relative my-6 mb-1.5${key % 2 === 0 ? " translate-y-[-3rem]" : ""}`} key={key}>
               <Image
                 src={testimonial.image}
                 alt="avatar"
-                className="absolute top-[-20%] left-[50%] translate-x-[-50%]"
+                className="absolute top-[-15%] left-[50%] translate-x-[-50%] w-16 h-16"
               ></Image>
 
-              <CardContent className="mt-[3rem]">
-                <p className="text-[#364151] text-[14px]">
+              <CardContent className="mt-[2rem]">
+                <p className="text-[#364151] text-[12px]">
                   {testimonial.text}
                 </p>
               </CardContent>
               <CardFooter>
-                <p className="text-[#0067FF] text-[15px]">
+                <p className="text-[#0067FF] text-[13px]">
                   {testimonial.name}
                 </p>
               </CardFooter>

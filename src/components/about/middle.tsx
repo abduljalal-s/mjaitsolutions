@@ -1,5 +1,5 @@
-import support from "../../../public/support.webp";
 import network from "../../../public/network.webp";
+import support from "../../../public/support.webp";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
@@ -31,7 +31,7 @@ const Middle = () => {
             <Image src={support} alt="mission" />
           </CardHeader>
           <CardContent>
-            <h4 className="font-semibold text-[25px]">Our Vision</h4>
+            <h4 className="font-semibold text-[25px]">Retail & IT service</h4>
             <p className="text-[14px] text-[#364151] py-4">
               To retail computers and related products and also to provide
               professional computer services that will assist businesses and
